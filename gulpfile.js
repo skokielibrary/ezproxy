@@ -10,8 +10,8 @@ var messages = {
   };
 
 var config = {
-    sass_path: 'src/public/assets/scss',
-    css_path: 'src/public/assets/css',
+    sass_path: 'src/_scss',
+    css_path: 'src/public',
     js_src_path: 'src/public/assets/js/src',
     js_path: 'dist/public/assets/js',
     bower_dir: 'bower_components',
@@ -59,14 +59,14 @@ gulp.task('sass', function () {
       includePaths: require('node-normalize-scss').with(config.sass_path)
     }))
 
-    .pipe(gulp.dest('dist/public/assets/css'))
+    .pipe(gulp.dest('dist/public'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest(config.css_path));
 });
 
 //watch sass for changes
 gulp.task('watch', function() {
-  gulp.watch('src/public/assets/scss/*.scss', ['sass']);
+  gulp.watch('src/_scss/*.scss', ['sass']);
   gulp.watch(['src/*.htm', 'src/*.html'], ['jekyll-rebuild']);
 });
 
