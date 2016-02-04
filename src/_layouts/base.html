@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} | Skokie Public Library</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Skokie Public Library offers our patrons a wide variety of useful and enriching online resources to use in the library and from home.">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Lato:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/assets/css/styles.css">
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <a href="https://skokielibrary.info" class="brand">
+        <img src="/public/assets/img/logo.png">
+      </a>
+    </div>
+  </header>
+  <div class="container">
+    <main role="main">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </main>
+    {% if page.type == "error" %}
+      <aside role="complementary">
+          <h3>Need help?</h3>
+          <p>Send us <a href="mailto:tellus@skokielibrary.info">an email</a> or call at 847-673-7774</p>
+      </aside>
+    {% elsif page.type == "login" %}
+      <aside role="complementary">
+          <h3>New to the library?</h3>
+          <p>Apply for a library card and take advantage of everything Skokie Public Library has to offer.</p>
+          <p><a href="https://skokielibrary.info/about/library-cards/">Apply now</a></p>
+      </aside>
+    {% endif %}
+  </div>
+  <footer role="contentinfo">
+    <div class="container">
+      <a href="https://skokielibrary.info" class="stamp">
+        <img src="/public/assets/img/logo-stamp.png">
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

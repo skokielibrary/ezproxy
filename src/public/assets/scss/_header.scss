@@ -1,0 +1,21 @@
+header{
+  height: 120px;
+  background-color: $white;
+
+  .container{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.brand{
+  display: inline-block;
+  height: 120px;
+  line-height: 120px;
+
+  img{
+    width: 180px;
+    height: auto;
+    vertical-align: middle;
+  }
+}

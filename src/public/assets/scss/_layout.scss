@@ -1,0 +1,33 @@
+.container{
+  box-sizing: content-box;
+  max-width: #{$max-width};
+  margin: auto;
+  padding: 3.7rem .9375rem;
+  overflow: hidden;
+}
+
+main{
+  float: left;
+  width: 50%;
+  max-width: 41rem;
+
+  @media screen and (max-width:40rem){
+    width: 100%;
+    max-width: 100%;
+    float: none;
+  }
+}
+
+aside{
+  width: 35%;
+  margin-left: 1.5rem;
+  float: right;
+
+  @media screen and (max-width:40rem){
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 0;
+    float: none;
+    border-top: 1px solid darken($body-bg, 20%);
+  }
+}

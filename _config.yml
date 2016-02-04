@@ -1,0 +1,3 @@
+source: src/
+destination: dist/
+exclude: ['node_modules', 'scss']
